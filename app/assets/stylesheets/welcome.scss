@@ -1,0 +1,39 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron { 
+	height: 700px;
+  background-image: url("http://storage.pagani.com/view/1024/2010-12-11-Pagani-03-2379mm6m.jpg");
+  background-size: cover;
+}
+
+.main {
+	position: relative;
+	text-align: left;
+	top: 90px;
+	left:50px;
+	width: 330px;
+}
+.main h1 {
+	color: #333;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	font-size: 70px;
+}
+
+.main .start_btn {
+	background-color: #333333;
+  	color: #FFFFFF;
+  	width: 100px;
+  	padding: 20px;
+  	position: relative;
+  	top:250px;
+  	display: inline;
+  	text-decoration: none;
+}
+
+.main .start_btn:hover {
+	color: #FFFFFF;
+	background: grey;
+}

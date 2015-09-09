@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+
+  get 'contact/index'
+
+  root 'welcome#index'
+
+  resources :articles
+  resources :users
+
+  get '/about' => 'about#index'
+  get '/contact' => 'contact#index'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

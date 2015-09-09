@@ -4,9 +4,40 @@
   <title>Cars</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link async href="http://fonts.googleapis.com/css?family=Alfa%20Slab%20One" rel="stylesheet" type="text/css"/>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "CarPics", root_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "<span class='glyphicon glyphicon-user'></span> Sign Up".html_safe, root_path %></li>
+        <li><%= link_to "<span class='glyphicon glyphicon-log-in'></span> Log in".html_safe, root_path %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <%= yield %>
 
