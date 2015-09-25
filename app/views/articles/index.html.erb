@@ -1,0 +1,35 @@
+<div class="container-fluid">
+	<div class="main">
+
+		<%= form_tag(articles_path, method: 'get', remote: "true") do %>
+
+	        <%= select_tag(:articleRegion, options_for_select([['European', 'European'], ['Japanese', 'Japanese'] , ['American', 'American']]), include_blank: 'Select Region')  %>
+
+	        <%= select_tag(:articleYear, options_for_select((1960..2016).map { |i| [i,i] }), include_blank: 'Select Year')  %>
+
+	        <%= select_tag(:articleVotes, options_for_select([['High to Low', 1], ['Low to High', 2]])) %>
+
+	        <%= submit_tag "Show" , id: 'show' %>
+			<%= submit_tag "Show All", id: 'showAll' %>
+
+        <%end%>
+
+
+
+
+		<div id="displayArea">
+			<!-- by default show render all
+				when clicked "show" render only results and wipe previous results clean
+				need to work for a combinations of values selected -->
+
+				<% @articles.each do |a| %>
+				    <h1><%= a.title %></h1>
+			        <h2><%= a.author %></h2>
+			        <h3><%= a.year %></h3> 
+			        <p>Votes: <%= a.votes %></p>
+			    <% end %>
+			
+		</div>
+
+	</div>
+</div>

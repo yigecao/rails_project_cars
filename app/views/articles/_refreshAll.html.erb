@@ -1,0 +1,9 @@
+<div>
+    <% @articles.each do |a| %>
+        <h1><%= a.title %></h1>
+        <h2><%= a.author %></h2>
+        <h3><%= a.year %></h3> 
+        <p><%= a.votes %></p>
+
+    <% end %>
+</div>
